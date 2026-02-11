@@ -1,0 +1,60 @@
+/* src/index.css */
+
+/* ── Tailwind Directives ── (must be at the top) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Global Resets & Base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.7;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Scrollbar (optional) ── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* ── Add your custom global classes here ── */
+.card {
+  @apply bg-white rounded-xl shadow-lg overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-2;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-indigo-600 to-blue-700 text-white font-bold py-4 px-8 rounded-full hover:from-indigo-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1;
+}
